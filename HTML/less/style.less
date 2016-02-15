@@ -7,7 +7,9 @@
 
 @blue-1:rgb(0, 9, 33);
 @blue-2:rgb(44, 88, 204);
-@blue-3:rgb(54, 66, 95);
+@blue-3:rgb(47, 57, 82);
+@blue-4:rgb(85, 104, 152);
+@blue-5:rgb(24, 29, 41);
 
 .myContainer{
     .lateral-margin(90%)
@@ -144,6 +146,10 @@ section.slide-show{
                 font-size: 1.4em;
             }
             
+            a.active{
+                background-color: @blue-4;
+            }
+            
         }
         
         .categorias{
@@ -166,6 +172,8 @@ section.slide-show{
     }
     
 }
+
+/* --- HOME --- */
 
 section.home{
     padding:20px 0;
@@ -268,16 +276,16 @@ section.home{
 section.home-banner{
     .lateral-margin(100%);
     display: table;
-    margin:20px 0;
+    margin:20px 0 0 0;
     background-color: @blue-3;
     
     .banners:extend(.myContainer){
-        padding:25px;
-        
-        div{
+         
+        .banner{
+            padding:25px;
             .inline-content(2%);
-        
             text-align: center;
+            height: 350px;
             
             .img-content{
                 width: 100%;
@@ -295,9 +303,164 @@ section.home-banner{
                 margin-top: 5px;
                 color: @white-10;
             }
+            
+            .boxes{
+                .lateral-margin(85%);
+                margin-top: 10px;
+                
+                .box{
+                    .inline-content(2%);
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    padding: 5px;
+                    
+                    img{
+                        width: 45px;
+                        float: left;
+                    }
+                    
+                    p{
+                        color: @white-10;
+                        font-size: 1.3em;
+                        margin:7px 0 0 -5px;
+                    }
+                }
+                
+            }
                 
         }
+        .banner:hover{
+            background-color: @blue-4;
+        }
         
+        .formas-entrega{
+        
+            .boxes{
+                
+                .box{
+                    margin-top: 8px;
+                    margin-bottom: 8px;
+                    
+                    img{
+                        width: 130px;
+                        float: left;
+                    }
+
+                    p{
+                        color: @white-10;
+                        font-size: 1.3em;
+                        margin:3px 0 0 0;
+                    }
+                }
+                
+            }
+        }
+        
+    }
+    
+}
+
+section.home-newslatter{
+    .lateral-margin(100%);
+    display: table;
+    margin:0 0;
+    padding:30px 0;
+    background-color: @blue-5;
+    
+    h2{
+        width: 100%;
+        font-size: 1.8em;
+        font-weight: 600;
+        text-align: center;
+        color: @white-10;
+        
+    }
+    
+    form{ 
+        .lateral-margin(60%);
+        margin-top: 40px;
+        
+        input{
+            .float-config(left,40%);
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+        
+        .btn{
+            .float-config(right,14%);     
+        }
+        
+    }
+    
+}
+
+/* --- SOBRE --- */
+
+section.sobre{
+    
+    margin-top:30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    
+    background-color: @white-9;
+    
+    h1{
+        margin-bottom: 15px;
+        font-size: 1.7em;
+        font-weight: 600;
+    }
+    
+    img{
+        .float-config(right, 40%);
+    }
+    
+    p{
+        .float-config(left, 55%);
+        font-size: 1.2em;
+        text-align: justify;
+    }
+}
+
+footer:extend(.full-container){
+    padding:25px;
+    
+    .myContainer{
+    
+        div{
+            .inline-content(3%);
+            display: table;
+            
+            h2{
+                font-size: 1.6em;
+                font-weight:600;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            
+            .lista{
+                width: 100%;
+                display: table;
+                margin:10px 0;
+                
+                h3{
+                    font-size: 1.35em;
+                    font-weight: 600;
+                    margin:10px 0;
+                }
+                
+                a{
+                    width: 100%;
+                    float: left;
+                    margin:5px 0;
+                    font-size: 1.3em;
+                }
+                
+                p{
+                    margin:5px 0;
+                }
+            }
+        }
+    
     }
     
 }

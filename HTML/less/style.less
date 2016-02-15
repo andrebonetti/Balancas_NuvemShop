@@ -15,6 +15,22 @@
     .lateral-margin(90%)
 }
 
+.myContainer_content{
+    
+    margin-top:30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: @white-9;
+      
+}
+
+.h1_content{
+    margin-bottom: 15px;
+    font-size: 1.7em;
+    font-weight: 600;
+    color: @red-2;
+}
+
 section:extend(.myContainer){}
     
 .top-header{
@@ -174,7 +190,6 @@ section.slide-show{
 }
 
 /* --- HOME --- */
-
 section.home{
     padding:20px 0;
 
@@ -395,21 +410,10 @@ section.home-newslatter{
 }
 
 /* --- SOBRE --- */
-
-section.sobre{
+section.sobre:extend(.myContainer_content){
     
-    margin-top:30px;
-    margin-bottom: 30px;
-    padding: 10px;
-    
-    background-color: @white-9;
-    
-    h1{
-        margin-bottom: 15px;
-        font-size: 1.7em;
-        font-weight: 600;
-    }
-    
+    h1:extend(.h1_content){}
+      
     img{
         .float-config(right, 40%);
     }
@@ -418,6 +422,142 @@ section.sobre{
         .float-config(left, 55%);
         font-size: 1.2em;
         text-align: justify;
+    }
+}
+
+/* --- SERVICOS --- */
+section.servicos:extend(.myContainer_content){
+    
+    h1:extend(.h1_content){}
+    
+    .boxes{
+        margin: 30px 0;
+        
+        .box{
+            .inline-content(3%);
+            padding: 7px;
+            
+            .img-content{
+                width: 100%;
+                height: 180px;
+                text-align: center;
+                
+                img{
+                    min-width: 60%;
+                    max-width: 100%;
+                    max-height: 180px;
+                }
+            }
+            
+            h2{
+                margin:8px 0;
+                font-size: 1.4em;
+                font-weight: 600;
+                text-align: center;
+                color:@blue-3;
+            }
+            
+            p{
+                .lateral-margin(85%);
+                text-align: justify;
+            }
+        }
+    }
+    
+}
+
+/* --- MODAL --- */
+//CONTATO
+.modal{
+
+    .modal-dialog
+    {
+        width: 550px;
+        margin: 0 auto;
+        margin-top: 100px;
+        display: table;
+        
+        .modal-content:extend(.full-container){
+            
+            .modal-header
+            {
+                padding:1% 2%;   
+            }
+            
+            .modal-body:extend(.full-container){   
+                               
+                display: table;
+                padding: 2%;
+                
+                h2
+                {
+                    margin-top: 7px;
+                    margin-bottom: 5px;
+                    font-size: 1.35em;
+                    font-weight: 600;
+                    color:@blue-1;
+                }
+                
+                p
+                {
+                    margin-bottom: 1px;
+                    font-size: 1.1em;
+                    text-align: justify;
+                }
+                
+                form:extend(.full-container){
+
+                    input,select,textarea{
+                        margin:5px 0;
+                    }
+                    
+                    input.nome{
+                        .float-config(left,100%);
+                    }
+                    
+                    input.empresa{
+                        .float-config(left,49.5%);
+                    }
+                    
+                    input.segmento{
+                        .float-config(right,49.5%);
+                    }
+                    
+                    input.email{
+                        .float-config(left,66%);
+                    }
+                    
+                    input.telefone{
+                        .float-config(right,32.6%);
+                    }
+                    
+                    select.estado{
+                        .float-config(left,32.6%);
+                    }
+                    
+                    input.cidade{
+                        .float-config(left,32.6%);
+                        margin-left: 1%;
+                    }
+                    
+                    input.bairro{
+                        .float-config(right,32.5%);
+                    }
+                    
+                    .btn{
+                        .float-config(left,auto);
+                        margin-right: 5px;
+                        margin-top: -10px;
+                    }
+                    
+                }
+            }
+            
+            .modal-footer
+            {
+                 padding:1% 2%; 
+            }
+        }
     }
 }
 

@@ -470,39 +470,6 @@ section.servicos:extend(.myContainer_content){
 /* --- PRODUTOS --- */
 section.produtos:extend(.myContainer_content){
         
-    aside{
-        .float-config(left,23%);
-        
-        background-color: @white-10;
-        .border(4px,@blue-3);
-        
-        h2{
-            background-color: @blue-1;
-            padding: 10px;
-            margin-bottom: 20px;
-            
-            font-size: 1.3em;          
-            font-weight: 600;
-            color: @white-10;
-        }
-        
-        a{
-            .float-config(left,100%);
-            padding: 6px 8px;
-            color: @blue-3;
-            font-size: 1.1em;
-            
-            /*border-style:solid;
-            border-width: 0 0 1px 0;
-            border-color: @blue-3;*/
-        }
-        a:hover,a.active{
-            background-color: @red-3;
-            color: @white-10;
-            border-color:@white-10;
-        }
-    }
-    
     .produto-content{
         .float-config(right,75%);
         
@@ -588,13 +555,111 @@ section.produtos:extend(.myContainer_content){
             
         }
         
-        .pagination{
+         .pagination{
             .float-config(right,auto);
             margin-right: 8px;
         }
+        
+         //DETALHE
+        
+         .produto-detalhes:extend(.full-container){
+             background-color: @white-10;
+
+             .img-content{
+                .float-config(left,60%);
+                 padding-top: 10px;
+                                
+                 .img-principal{
+                     width: 100%; 
+                     margin-bottom: 20px;
+                     height: 300px;
+                     padding: 2%;
+                     text-align: center;
+                     
+                    img{
+                        max-width: 100%;
+                        max-height: 300px;
+                    }
+                 }
+                 
+                 .imgs-boxes{
+                     width: 100%;
+                     display: table;
+                     
+                     .box{
+                        .float-config(left,20%);
+                         height: 75px;
+                         padding: 2%;
+                         
+                         img{
+                            max-width: 100%;
+                            max-height: 75px;
+                         }
+                     }
+                 }
+             }
+             
+             .detalhes{
+                .float-config(right,40%);
+                 padding: 10px;
+                 
+                 background-color: @white-8;
+                 
+                 h2{
+                     margin-top: 12px;
+                     margin-bottom: 12px; 
+                     
+                     font-size: 1.25em;
+                     font-weight: 600;
+                     color: @blue-3;
+                 }
+                 
+                 p{
+                     font-size: 0.95em;
+                 }
+                
+                 .descricao{
+                    height: 200px;
+                    overflow: hidden; 
+                 }
+             }
+         }
     }
-    
+        
 }
+
+aside.categorias_produtos{
+        .float-config(left,23%);
+        
+        background-color: @white-10;
+        .border(4px,@blue-3);
+        
+        h2{
+            background-color: @blue-1;
+            padding: 10px;
+            margin-bottom: 20px;
+            
+            font-size: 1.3em;          
+            font-weight: 600;
+            color: @white-10;
+        }
+        
+        a{
+            .float-config(left,100%);
+            padding: 6px 8px;
+            color: @blue-3;
+            font-size: 1.1em;
+            
+            /*border-style:solid;
+            border-width: 0 0 1px 0;
+            border-color: @blue-3;*/
+        }
+        a:hover,a.active{
+            background-color: @red-3;
+            color: @white-10;
+            border-color:@white-10;
+        }
+    }
 
 /* --- MODAL --- */
 //CONTATO

@@ -38,7 +38,7 @@
                         
                             <div class="box">
 
-                                <a class="img-content" href="">
+                                <a class="img-content" href="produto_detalhes.php">
                                     <img src="img/balanca.png">
                                 </a>
                                 <h2>Nome Produto 1</h2>
@@ -61,15 +61,7 @@
                     
                 </div>
             
-                <aside>
-                    
-                    <h2>Categorias</h2>
-                    
-                    <?php for($i=1;$i <= 15;$i++){?>
-                    <a class="<?php if($i == 1){echo "active";} ?>" href="#">Categoria <?=$i?></a>
-                    <?php } ?>
-                    
-                </aside>
+                <?php include_once("frames/aside_categorias_produtos.php")?>
             
         </section>    
         
